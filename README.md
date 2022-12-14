@@ -1,66 +1,62 @@
-# Phase 2 Project
+# Phase 2 Project - King county house sales
 
-Another module down--you're almost half way there!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+## Business background
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+Kings County Housing Authority provides rental housing and assistance to more than 55,000 people. This quality, affordable housing supports health and self‑sufficiency.
+serves to provide innovative, effective, and equitable housing solutions so that all people and communities can prosper. Their vision is that all residents of King County have quality affordable housing
+KCHA owns 137 properties with 11,582 units including 4,284 units of subsidized housing for families, the elderly, and disabled people.
 
-## Project Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
 
-### The Data
+## Business Problem
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+Predicting the sale price of properties is always important and often a challenging problem. We want to build a model that can determine the prices of a given house according to a number of features. We will use a subset of the data for training and the remaining for testing our modeling.
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+## The Data
+This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv`
 
-### Business Problem
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+## Methods/technologies used
+* data mining
+* data understanding
+* data cleaning
+* data visualization
+* modeling
+* analysis
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+### Results
+![My image](images/assumption on liniearity.png)
+* assumption on linearity
+![My image](images/assumption on normality.png)
+* assumption on normality
 
-## Deliverables
 
-There are three deliverables for this project:
+## Conclusions
+This project was driven by the need to understand how different features influence the price of houses. We investigated the price of houses with varied features. We found that as the amenities increased the price also increased. We observed houses in King County were priced high for providing people with special amenities like the waterfront.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+## Recommendations
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+The top features to determine the value of houses are:
 
-### Key Points
+Grade: overall grade given to the housing unit, based on King County grading system
+According to King County Residential Glossary of Terms, classification by construction quality which refers to the types of materials used and the quality of workmanship. Buildings of better quality (higher grade) cost more to build per unit of measure and command higher value.
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+The higher grade means the better quality of the house, while the quality of house is the most important factor when determining the value of homes. If the house has a high grade, the sales price is also decent.
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+2. Square footage of the house and its nearest 15 neighbors
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+The square footage of the living area is the second most important feature when determining the sales price. The larger space of living area, the higher sales price of the house. Also, people will consider the average living space in the neighborhood.
 
-## Getting Started
+3. Square footage of lot and its nearest 15 neighbors
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
+The square footage of the lot is another key feature when determining the value of house. Based on our model, the larger size of the lot will lead to a higher sales price. Home buyers often prefer properties that allow for easy indoor-outdoor living and provide level areas for children, pets and gardening.
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
+However, interestingly, the large size of the lot for its nearest 15 neighbors will draw down the sales price. It might because the property tax is assessed on the lot size of the house and its neighbors. Too large lotsize might lead to higher property tax.
 
-## Project Submission and Review
+4. Waterfront: whether the house has a view to a waterfront
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+The houses with waterfront view have a higher sales price than those without waterfront view.
 
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+The monetary relationship between the value of house and the key features is summarized in the above graph.
