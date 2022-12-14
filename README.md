@@ -27,9 +27,9 @@ This project uses the King County House Sales dataset, which can be found in  `k
 * analysis
 
 ### Results
-![My image](images/assumption on liniearity.png)
+![My image](images/linearity.png)
 * assumption on linearity
-![My image](images/assumption on normality.png)
+![My image](images/normality.png)
 * assumption on normality
 
 
